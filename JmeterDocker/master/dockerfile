@@ -1,0 +1,5 @@
+FROM jbase
+
+WORKDIR $JMETER_HOME/bin
+
+EXPOSE 60000
