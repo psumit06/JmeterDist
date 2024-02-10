@@ -1,0 +1,12 @@
+docker run -dit --name slave1 jslave /bin/bash
+
+docker run -dit --name master jmaster /bin/bash
+
+
+docker inspect 565299a7bce9 | findstr "IPAddress"
+172.17.0.4
+172.17.0.3
+
+docker cp Sampletest1.jmx slave1:/jmeter/apache-jmeter-5.3/bin/Sampletest1.jmx
+
+jmeter -n -t Sampletest1.jmx -l Run2.jtl -R 172.17.0.4,172.17.0.3
