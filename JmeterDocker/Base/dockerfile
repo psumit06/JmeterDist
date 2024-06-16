@@ -25,6 +25,7 @@ ADD ./jmeter-plugins/lib/ext /jmeter/apache-jmeter-$JMETER_VERSION/lib/ext
 
 # ADD the sample test
 ADD TestScripts TestScripts
+ADD Results Results
 
 # Set JMeter Home
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
